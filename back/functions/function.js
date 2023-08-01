@@ -26,7 +26,7 @@ const userModel=new mongoose.model("formusers",userSchema);
 
 
 const UPLOAD_IMAGE_RETURN_BACK = (req, res) => {
-  res.send({ url: `https://mern-form-sooty.vercel.app/uploads/${req.file.filename}` });
+  res.send({ url: `https://mern-form-api.vercel.app/uploads/${req.file.filename}` });
 };
 
 const SHOW_IMAGE_THROW_FILE = (req, res) => {
