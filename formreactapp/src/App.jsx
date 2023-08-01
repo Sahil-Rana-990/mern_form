@@ -14,7 +14,7 @@ function App() {
     if(name==="image"){
       const formdata=new FormData();
       formdata.append("image",e.target.files[0])
-      const result=await axios.post("https://mern-form-sooty.vercel.app/api/uploads",formdata,{
+      const result=await axios.post("https://mern-form-api.vercel.app/api/uploads",formdata,{
         headers:{
           "Content-Type":"multipart/form-data"
         }
@@ -34,7 +34,7 @@ function App() {
     if(username=="" || password== "" ||image===""){
       alert("please, fill the data!!")
     }else{
-      const res=await axios.post("https://mern-form-sooty.vercel.app/api/uploadData",{username,password,image},{
+      const res=await axios.post("https://mern-form-api.vercel.app/api/uploadData",{username,password,image},{
         headers:{
           "Content-Type":"application/json"
         }
