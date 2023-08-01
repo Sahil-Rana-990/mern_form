@@ -13,7 +13,7 @@ export default function Singleuser() {
 
    
   async function getData(){
-    const res=await axios.post("http://localhost:5000/api/getData",{username:user},{
+    const res=await axios.post("https://mern-form-sooty.vercel.app/getData",{username:user},{
       headers:{
         "Content-Type":"application/json"
       }
