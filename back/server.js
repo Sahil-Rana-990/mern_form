@@ -22,6 +22,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 //--------------  Route back
+app.get("/",res.send("hello"));
 app.post("/api/uploads", upload.single("image"), UPLOAD_IMAGE_RETURN_BACK);
 app.get("/uploads/:imgName", SHOW_IMAGE_THROW_FILE);
 app.post("/api/uploadData", STORE_DATA_IN_MONGODB);
