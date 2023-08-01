@@ -25,7 +25,7 @@ const upload = multer({ storage });
 
 //--------------  Route back
 app.get("/",(req,res)=>{
-  res.send("hello")
+  res.send({name:"jhon due"})
 });
 app.post("/api/uploads", upload.single("image"), UPLOAD_IMAGE_RETURN_BACK);
 app.get("/uploads/:imgName", SHOW_IMAGE_THROW_FILE);
