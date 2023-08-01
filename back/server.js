@@ -8,7 +8,9 @@ const {
   STORE_DATA_IN_MONGODB,
   FIND_DATA_FROM_USERNAME,
 } = require("./functions/function");
-app.use(cors());
+app.use(cors({
+  origin:"https://mern-form-front.vercel.app/"
+}));
 app.use(express.json());
 
 const storage = multer.diskStorage({
