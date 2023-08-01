@@ -1,6 +1,6 @@
 {
   "name": "formreactapp",
-  "proxy":"https://mern-form-api.vercel.app/api/uploads",
+  "proxy":"https://mern-form-api.vercel.app/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
