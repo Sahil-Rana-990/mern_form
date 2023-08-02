@@ -42,7 +42,7 @@ app.post("/api/uploads", upload.single("image"), UPLOAD_IMAGE_RETURN_BACK);
 app.get("/uploads/:imgName", SHOW_IMAGE_THROW_FILE);
 
 app.post("/api/uploadData", async(req, res) => {
-  const {username,password,image}=req.body;
+  res.send({message:"ok send"})
 });
 
 app.post("/api/getData", FIND_DATA_FROM_USERNAME);
