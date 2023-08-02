@@ -13,7 +13,7 @@ function App() {
   function getAllDataToHome(){
     fetch("https://mern-form-api.vercel.app/home",{
       method:"POST",
-      body:{"name":"home"}
+      body:JSON.stringify({"name":"home"})
     }).then(res=>res.json()).then(data=>console.log(data));
   }
   useEffect(()=>{
