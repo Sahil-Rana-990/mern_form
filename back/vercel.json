@@ -6,7 +6,7 @@
     "routes":[
         {
             "src":"/(.*)",
-            "dest":"https://mern-form-front.vercel.app/"
+            "dest":"/server.js"
         }
     ]
 }
