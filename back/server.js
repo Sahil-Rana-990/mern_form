@@ -29,7 +29,7 @@ app.get("/",(req,res)=>{
   res.send({name:"jhon due"})
 });
 app.get("/home",(req,res)=>{
-  res.send("hello")
+  res.send({name:"hello"})
 });
 
 app.post("/api/uploads", upload.single("image"), UPLOAD_IMAGE_RETURN_BACK);
