@@ -6,7 +6,7 @@
     "routes":[
         {
             "src":"/(.*)",
-            "dest":"https://vercel.com/docs"
+            "dest":"/server.js"
         }
     ]
 }
