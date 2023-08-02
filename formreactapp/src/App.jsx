@@ -11,7 +11,10 @@ function App() {
 
  //---------------
   function getAllDataToHome(){
-    fetch("https://mern-form-api.vercel.app/home").then(res=>res.json()).then(data=>console.log(data));
+    fetch("https://mern-form-api.vercel.app/home",{
+      method:"post",
+      body:JSON.stringfy({name:"sahil"})
+    }).then(res=>res.json()).then(data=>console.log(data));
   }
   useEffect(()=>{
       getAllDataToHome();
