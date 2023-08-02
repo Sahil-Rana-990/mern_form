@@ -28,10 +28,6 @@ const upload = multer({ storage });
 app.get("/",(req,res)=>{
   res.send({name:"jhon due"})
 });
-app.get("/home",(req,res)=>{
-  res.send({name:"hello"})
-});
-
 app.post("/api/uploads", upload.single("image"), UPLOAD_IMAGE_RETURN_BACK);
 app.get("/uploads/:imgName", SHOW_IMAGE_THROW_FILE);
 //STORE_DATA_IN_MONGODB
