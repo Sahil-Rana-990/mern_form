@@ -6,7 +6,7 @@ function App() {
   let[userData,setuserData]=useState({
     username:"",
     password:"",
-    image:""
+    image:"image"
   });
 
   const changeUserData=async (e)=>{
