@@ -29,6 +29,7 @@ app.get("/",(req,res)=>{
   res.send({name:"jhon due"})
 });
 app.post("/home",(req,res)=>{
+  res.send("hello")
   if(req.body.name==="home"){
     res.send({name:"home page"})
   }else{
