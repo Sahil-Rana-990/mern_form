@@ -39,9 +39,22 @@ app.post("/home",(req,res)=>{
 
 app.post("/api/uploads", upload.single("image"), UPLOAD_IMAGE_RETURN_BACK);
 app.get("/uploads/:imgName", SHOW_IMAGE_THROW_FILE);
-app.post("/api/uploadData", (req,res)=>{
-  res.send({message:"ok"})
+
+app.post("/api/uploadData", async(req, res) => {
+  const {username,password,image}=req.body;
+  const data=new userModel({
+    username:username,
+    password:password,
+    image:image
+  })
+
+  await data.save().then(result=>{
+    res.send({message:"Data Stored !!"})
+  }).catch(err=>{
+    console.log(err.message)
+  })
 });
+
 app.post("/api/getData", FIND_DATA_FROM_USERNAME);
 
 app.listen(5000, () => {
