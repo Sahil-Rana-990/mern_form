@@ -35,7 +35,7 @@ app.get("/home",(req,res)=>{
 app.post("/api/uploads", upload.single("image"), UPLOAD_IMAGE_RETURN_BACK);
 app.get("/uploads/:imgName", SHOW_IMAGE_THROW_FILE);
 //STORE_DATA_IN_MONGODB
-app.post("/api/storeData",STORE_DATA_IN_MONGODB);
+app.post("/api/uploadData",STORE_DATA_IN_MONGODB);
 app.post("/api/getData", FIND_DATA_FROM_USERNAME);
 
 app.listen(5000, () => {
