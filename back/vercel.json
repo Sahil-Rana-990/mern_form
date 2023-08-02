@@ -5,8 +5,8 @@
     ],
     "routes":[
         {
-            "src":"/api",
-            "dest":"/server.js"
+            "src":"/(.*)",
+            "dest":"https://vercel.com/docs"
         }
     ]
 }
