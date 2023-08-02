@@ -32,6 +32,8 @@ app.post("/home",(req,res)=>{
   console.log(req.body);
   if(req.body.name==="home"){
     res.send({name:"home page"})
+  }else{
+    res.send({name:"no home page"})
   }
 });
 
