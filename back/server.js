@@ -27,7 +27,8 @@ const upload = multer({ storage });
 app.get("/",(req,res)=>{
   res.send({name:"jhon due"})
 });
-app.get("/home",(req,res)=>{
+app.post("/home",(req,res)=>{
+  console.log(req.body);
   res.send({name:"home page"})
 });
 
