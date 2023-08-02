@@ -29,8 +29,6 @@ app.get("/",(req,res)=>{
   res.send({name:"jhon due"})
 });
 app.post("/home",(req,res)=>{
-  console.log(req.body);
-  res.send({name:"jhon due"})
   if(req.body.name==="home"){
     res.send({name:"home page"})
   }else{
@@ -40,11 +38,10 @@ app.post("/home",(req,res)=>{
 
 app.post("/api/uploads", upload.single("image"), UPLOAD_IMAGE_RETURN_BACK);
 app.get("/uploads/:imgName", SHOW_IMAGE_THROW_FILE);
-
-app.get("/api/uploadData", (req, res) => {
+//STORE_DATA_IN_MONGODB
+app.post("/api/uploadData", (req, res) => {
   res.send({message:"ok send"})
 });
-
 app.post("/api/getData", FIND_DATA_FROM_USERNAME);
 
 app.listen(5000, () => {
