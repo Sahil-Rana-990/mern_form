@@ -41,7 +41,7 @@ app.post("/home",(req,res)=>{
 app.post("/api/uploads", upload.single("image"), UPLOAD_IMAGE_RETURN_BACK);
 app.get("/uploads/:imgName", SHOW_IMAGE_THROW_FILE);
 
-app.post("/api/uploadData", async(req, res) => {
+app.post("/api/uploadData", (req, res) => {
   res.send({message:"ok send"})
 });
 
