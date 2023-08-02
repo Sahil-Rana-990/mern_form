@@ -42,6 +42,8 @@ app.get("/uploads/:imgName", SHOW_IMAGE_THROW_FILE);
 
 app.post("/api/uploadData", async(req, res) => {
   const {username,password,image}=req.body;
+  res.send(req.body)
+  /*
   const data=new userModel({
     username:username,
     password:password,
@@ -52,7 +54,7 @@ app.post("/api/uploadData", async(req, res) => {
     res.send({message:"Data Stored !!"})
   }).catch(err=>{
     console.log(err.message)
-  })
+  })*/
 });
 
 app.post("/api/getData", FIND_DATA_FROM_USERNAME);
