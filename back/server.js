@@ -42,7 +42,7 @@ app.get("/uploads/:imgName", SHOW_IMAGE_THROW_FILE);
 
 app.post("/api/uploadData", async(req, res) => {
   const {username,password,image}=req.body;
-  res.send({data:req.body})
+  res.send({data:"ok"})
   /*
   const data=new userModel({
     username:username,
