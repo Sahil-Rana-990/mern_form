@@ -28,13 +28,8 @@ const upload = multer({ storage });
 app.get("/",(req,res)=>{
   res.send({name:"jhon due"})
 });
-app.post("/home",(req,res)=>{
+app.get("/home",(req,res)=>{
   res.send("hello")
-  if(req.body.name==="home"){
-    res.send({name:"home page"})
-  }else{
-    res.send({name:req.body})
-  }
 });
 
 app.post("/api/uploads", upload.single("image"), UPLOAD_IMAGE_RETURN_BACK);
