@@ -30,6 +30,7 @@ app.get("/",(req,res)=>{
 });
 app.post("/home",(req,res)=>{
   console.log(req.body);
+  res.send({data:"ok"})
   if(req.body.name==="home"){
     res.send({name:"home page"})
   }else{
@@ -42,7 +43,6 @@ app.get("/uploads/:imgName", SHOW_IMAGE_THROW_FILE);
 
 app.post("/api/uploadData", async(req, res) => {
   const {username,password,image}=req.body;
-  res.send({data:"ok"})
 });
 
 app.post("/api/getData", FIND_DATA_FROM_USERNAME);
