@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 import {useNavigate} from 'react-router-dom'
 function App() { 
   let navigate=useNavigate();
@@ -9,6 +9,14 @@ function App() {
     image:"image"
   });
 
+ //---------------
+  function getAllDataToHome(){
+    fetch("https://mern-form-api.vercel.app/home").then(res=>res.json()).then(data=>console.log(data));
+  }
+  useEffect(()=>{
+      getAllDataToHome();
+  })
+  
   const changeUserData=async (e)=>{
     const {name,value} = e.target; 
     if(name==="image"){
