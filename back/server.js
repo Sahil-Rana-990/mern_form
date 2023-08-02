@@ -33,7 +33,7 @@ app.post("/home",(req,res)=>{
   if(req.body.name==="home"){
     res.send({name:"home page"})
   }else{
-    res.send({name:"no home page"})
+    res.send({name:req.body})
   }
 });
 
