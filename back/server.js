@@ -30,7 +30,9 @@ app.get("/",(req,res)=>{
 });
 app.post("/home",(req,res)=>{
   console.log(req.body);
-  res.send({name:"home page"})
+  if(req.body.name==="home"){
+    res.send({name:"home page"})
+  }
 });
 
 app.post("/api/uploads", upload.single("image"), UPLOAD_IMAGE_RETURN_BACK);
