@@ -30,7 +30,7 @@ app.get("/",(req,res)=>{
 });
 app.post("/home",(req,res)=>{
   console.log(req.body);
-  res.send({data:"ok"})
+  res.send({message:"ok"})
   if(req.body.name==="home"){
     res.send({name:"home page"})
   }else{
