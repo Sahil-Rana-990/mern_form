@@ -9,7 +9,8 @@ const {
   FIND_DATA_FROM_USERNAME,
 } = require("./functions/function");
 app.use(cors({
-  origin:["https://mern-form-front.vercel.app"]
+  origin:["https://mern-form-front.vercel.app"],
+  methods:["GET","POST"]
 }));
 app.use(express.json());
 
