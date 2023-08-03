@@ -29,9 +29,9 @@ app.get("/",(req,res)=>{
   res.send({name:"jhon due"})
 });
 //UPLOAD_IMAGE_RETURN_BACK
-app.post("/api/uploads", (req,res)=>{
-  res.send({url:"hello"});
-});
+app.post("/api/uploads",( req, res) => {
+  res.send({ url: `https://mern-form-api.vercel.app/uploads/${req.file.filename}` });
+})
 app.get("/uploads/:imgName", SHOW_IMAGE_THROW_FILE);
 //STORE_DATA_IN_MONGODB
 app.post("/api/uploadData",STORE_DATA_IN_MONGODB);
