@@ -13,15 +13,13 @@ function App() {
   const changeUserData=async (e)=>{
     const {name,value} = e.target; 
     if(name==="image"){
-      const formdata=new FormData();
-      formdata.append("image",e.target.files[0])
-      const result=await axios.post("https://mern-form-api.vercel.app/api/uploads",formdata,{
-        headers:{
-          "Content-Type":"multipart/form-data"
-        }
-      })
-      console.log(result);
-      setuserData({...userData,image:result.data.url});
+      const formData=new FormData();
+      formData.append("file",e.target.files[0]);
+      formData.append("upload_preset","RanaSahil");
+      formData.append("cloud_name","di3rw1zx3");
+      const res=await axios.post("https://api.cloudinary.com/v1_1/di3rw1zx3/image/upload",formData);
+      
+      setuserData({...userData,image:res.data.url});
       return;
     }
     setuserData({
