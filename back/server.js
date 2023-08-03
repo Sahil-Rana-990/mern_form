@@ -30,7 +30,7 @@ app.get("/",(req,res)=>{
 });
 //UPLOAD_IMAGE_RETURN_BACK
 app.post("/api/uploads",( req, res) => {
-  res.send({ url: `https://mern-form-api.vercel.app/uploads/${req.file.filename}` });
+  res.send({ url: `https://mern-form-api.vercel.app/uploads/` });
 })
 app.get("/uploads/:imgName", SHOW_IMAGE_THROW_FILE);
 //STORE_DATA_IN_MONGODB
