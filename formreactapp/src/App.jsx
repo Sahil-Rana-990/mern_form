@@ -20,6 +20,7 @@ function App() {
           "Content-Type":"multipart/form-data"
         }
       })
+      console.log(result);
       setuserData({...userData,image:result.data.url});
       return;
     }
