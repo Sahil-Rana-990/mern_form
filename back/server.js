@@ -29,7 +29,7 @@ app.get("/",(req,res)=>{
   res.send({name:"jhon due"})
 });
 //UPLOAD_IMAGE_RETURN_BACK
-app.post("/api/uploads",upload.single("image"),( req, res) => {
+app.post("/api/uploads",( req, res) => {
   res.send({ url: `https://mern-form-api.vercel.app/uploads/` });
 })
 app.get("/uploads/:imgName", SHOW_IMAGE_THROW_FILE);
